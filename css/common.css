@@ -401,8 +401,8 @@ button:focus, a:focus, img:focus {outline:none;}
 		.footer_menu{display:flex; padding-left: 50px; justify-content: space-between;}
 		 .footer_menu .footer_menu-item{color: #fff; text-decoration: none;}
 		 .footer_menu .footer_menu-item:hover{color: #0D82CD}
-		.footer_contact_row{display: flex; flex-wrap: wrap;}
-			.footer_contact_phone{padding-left: 90px;}
+		.footer_contact_row{display: flex; flex-wrap: wrap; justify-content: space-between;}
+			.footer_contact_phone{padding-left: 80px;}
 				.f-phone{color:#fff; display: block;text-decoration: none;}
 				.f-phone:hover{color: #0D82CD}
 				.f-phone_text{color:#fff; display: block; margin-top: 16px;}
