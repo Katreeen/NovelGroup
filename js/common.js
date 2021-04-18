@@ -104,6 +104,8 @@ $(document).ready(function () {
 	});
 
 
+
+
 	gsap.to(".section_catalog .carousel_item_title", {
 		yPercent: -100,
 		ease: "none",
@@ -121,10 +123,30 @@ $(document).ready(function () {
 		ease: "none",
 		scrollTrigger: {
 			trigger: ".section_catalog",
-			start: "top top", 
+			start: "top top",
+			end: "bottom top",
 			scrub: true
 		}, 
 	});
+
+	// var catalogTl = gsap.timeline();
+	
+	// ScrollTrigger.create({
+	// 	animation: catalogTl,
+	// 	trigger: '.section_catalog',
+	// 	start: "top top",
+	// 	end: "bottom top",
+	// 	scrub: true,
+
+	// });
+	
+	// catalogTl.to(".section_catalog .carousel_item_title", { duration: 5, y: '-100%' });
+		// .to(".section_catalog .carousel_item_img", { duration: 5, y: '20%' });
+	
+	
+	
+	
+	
 
 	// gsap.to(".section_about .about_img", {
 	// 	yPercent: -100,
@@ -175,13 +197,25 @@ var cursor = $(".cursor");
 		});
 	 }
 
-$(".section_catalog").on("mouseover", function() {
+$(".catalog_carousel .slick-list").on("mouseover", function() {
 	gsap.to(cursor, 0.4, { scale: 1, autoAlpha: 1 });
-	$(".section_catalog").on("mousemove", moveCircle);
+
+	$(".section_catalog .slick-list").on("mousemove", moveCircle);
  });
 
- $(".section_catalog").on("mouseout", function() {
+ $(".section_catalog .slick-list").on("mouseout", function() {
 	gsap.to(cursor, 0.4, { scale: 0.4, autoAlpha: 0 });
+ });
+	
+	
+
+	
+	
+	
+ gsap.fromTo($('.carousel_item_img'), {duration: 3, y: 0, x: "100%", opacity: 0}, {duration: 3, ease: "expo.out", x: 0, opacity: 1});
+ $('.main_carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	 gsap.fromTo($('.carousel_item_img'), { duration: 3, x: "100%", opacity: 0 }, { duration: 3, ease: "expo.out", x: 0, opacity: 1 });
+	 Splitting();
  });
 
 
@@ -235,7 +269,6 @@ const aboutTl = gsap.timeline();
 
 
 
-
 /*
 	
 
@@ -263,4 +296,55 @@ const aboutTl = gsap.timeline();
 	servEndTl.fromTo(".section_service .service_top", { duration: 5, y: 0, opacity: 1 }, { duration: 5, y: '-100%', opacity: 0 }, 0)
 	.fromTo(".section_service .section_title", { duration: 5, y: 0 }, { duration: 5, y: '-100%'},0);
 */
-});
+	
+	
+
+
+	// const char = document.querySelectorAll('.char'),
+	// delayTime = 0,
+	// animationTime = 0.1,
+	// tlchar = new TimelineMax();
+	
+		
+	// TweenMax.set(char, {opacity: 0, y: '1.1em'});
+	// TweenMax.to(char[0], animationTime, {opacity: 1, y: '0' });
+	
+
+	// for (var i = 1; i < char.length; i++) {
+	// 	tlchar.to(char[i], animationTime, {opacity: 1, y: '0'}, (i-1) * (animationTime + delayTime));
+	// 	//after the new image animates in, we can hide the old one that's behind it (aids browser performance)
+	// 	//tlchar.set(char[i-1], {opacity: 0, y: '-150%'});
+	// }
+	// tlchar.fromTo(char[0], animationTime, {zIndex:100}, {delay:delayTime});
+
+
+		
+	// const tlchar = gsap.timeline();
+	// gsap.fromTo(".char", { opacity: 0, y: '-150%' }, { duration: 1.5, width: 100, height: 200 });
+	// tlchar.fromTo(".char",  { opacity: 0, y: '-150%' }, { duration: 1.5, width: 100, height: 200 });
+	// char.forEach(function(item, i) {
+	// 	alert( i + ": " + item + " (массив:" + arr + ")" );
+	// });
+	
+
+// Wrap every letter in a span
+// var textWrapper = document.querySelector('.ml2');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+// anime.timeline({loop: true})
+//   .add({
+//     targets: '.ml2 .letter',
+//     rotateY: [-90, 0],
+//     duration: 1300,
+//     delay: (el, i) => 45 * i
+//   }).add({
+//     targets: '.ml2',
+//     opacity: 0,
+//     duration: 1000,
+//     easing: "easeOutExpo",
+//     delay: 1000
+//   });
+	
+Splitting()
+	
+  });
