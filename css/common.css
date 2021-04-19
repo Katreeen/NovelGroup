@@ -217,7 +217,7 @@ button:focus, a:focus, img:focus {outline:none;}
 				.header_col_contact {}
 					.header_contact_phone_row {}
 						.header_contact_phone {width: 326px;}
-							.h-phone {display: block; text-align: right; text-decoration: none;}
+							.h-phone {display: block; text-align: right; text-decoration: none; white-space: nowrap;}
 							.h-phone_text {text-align: right; display: block; margin-top: 11px;}
 						.header_callback_btn {width: 50%; text-align: center;}
 							.callback {}
