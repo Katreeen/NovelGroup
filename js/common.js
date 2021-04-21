@@ -2,8 +2,8 @@ $(document).ready(function () {
 	$('.main_carousel').slick({
 		dots: true,
 		//arrows: false,
-		prevArrow: $('.s-prev'),
-   	nextArrow: $('.s-next'),
+		prevArrow: $('.main_carousel_wrap .s-prev'),
+   	nextArrow: $('.main_carousel_wrap .s-next'),
 		infinite: true,
 		speed: 1000,
 		fade: true,
@@ -34,8 +34,8 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		//arrows: true,
-		prevArrow: $('.s-prev'),
-   	nextArrow: $('.s-next'),
+		prevArrow: $('.partners_nav_wrap .s-prev'),
+   	nextArrow: $('.partners_nav_wrap .s-next'),
 		dots: false,
 		fade: true,
 		asNavFor: '.partners_nav'
@@ -46,7 +46,6 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		asNavFor: '.partners_for',
 		dots: false,
-	
 		focusOnSelect: true
 	 });
 	
