@@ -26,6 +26,7 @@ $(document).ready(function () {
 		infinite: true,
 		speed: 1000,
 		slidesToShow: 1,
+		variableWidth: true
 		//centerMode: true,
 		//adaptiveHeight: true
 	});
@@ -95,6 +96,26 @@ $(document).ready(function () {
 		touchpadSupport   : true,
 	});
 	
+
+	window.onresize = function (event) {
+		var viewportOffset = $('.offset-2')[0].getBoundingClientRect();
+		var left = viewportOffset.left;
+		//console.log(left);
+		$('.pl-js').css( "padding-left", left);
+	};
+	var viewportOffset = $('.offset-2')[0].getBoundingClientRect();
+	var left = viewportOffset.left;
+	//console.log(left);
+	$('.pl-js').css( "padding-left", left);
+
+
+
+
+
+
+
+
+
 // Animation
 
 // 	const mainTl = gsap.timeline();
