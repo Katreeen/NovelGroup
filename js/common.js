@@ -47,7 +47,33 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		asNavFor: '.partners_for',
 		dots: false,
-		focusOnSelect: true
+		 focusOnSelect: true,
+		 responsive: [
+			{
+			  breakpoint: 1920,
+			  settings: {
+				 slidesToShow: 3,
+				 
+			  }
+			},
+			{
+			  breakpoint: 1199,
+			  settings: {
+				 slidesToShow: 2,
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				 slidesToShow: 1,
+				 slidesToScroll: 1
+			  }
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		 ]
+		
 	 });
 	
 	
@@ -98,18 +124,23 @@ $(document).ready(function () {
 	
 
 	window.onresize = function (event) {
-		var viewportOffset = $('.offset-2')[0].getBoundingClientRect();
+		var viewportOffset = $('.offset-xxl-2')[0].getBoundingClientRect();
 		var left = viewportOffset.left;
 		//console.log(left);
 		$('.pl-js').css( "padding-left", left);
 	};
-	var viewportOffset = $('.offset-2')[0].getBoundingClientRect();
+	var viewportOffset = $('.offset-xxl-2')[0].getBoundingClientRect();
 	var left = viewportOffset.left;
 	//console.log(left);
 	$('.pl-js').css( "padding-left", left);
 
-
-
+	
+	$('.navbar-toggler').click(function () {
+		$('.header_drop').slideDown();
+	})
+	$('.navbar-toggler-close').click(function () {
+		$('.header_drop').slideUp();
+	})
 
 
 
