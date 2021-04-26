@@ -568,13 +568,70 @@ button:focus, a:focus, img:focus {outline:none;}
 	.drop_menu_item.parent .drop_menu_item_link{position: relative;}
 	.drop_menu_item.parent .drop_menu_item_link:after{content:''; background: url(/i/drop-down.svg)no-repeat; width: 10px; height: 10px; margin-left: 14px; display: inline-block;}
 	.drop_menu_item.parent.active .drop_menu_item_link:after, .drop_menu_item.parent:hover .drop_menu_item_link:after{content:''; background: url(/i/drop-down-active.svg)no-repeat; width: 10px; height: 10px; margin-left: 14px; display: inline-block;}
-	
+
+	.catalog_carousel .carousel_item_title{top: 61px;}
+	.catalog_carousel{height: 600px;}
+	.carousel_item_top{position: static; margin: 0 0 0 auto}
+	.catalog_carousel .slick-list.draggable{padding-right: 0;}
+	.catalog_carousel .carousel_item{max-width:600px; width: 100%;}
+	.catalog_carousel .carousel_item_title{padding-left: 52px; max-width: 400px}
+	.service_img{margin-top: -79px;}
+	.partners_top .section_title{padding-right: 30px;}
+	.partners_nav{margin-left: 0;}
+	.main_carousel_nav .slick-arrow, .partners_carousel_nav .slick-arrow{width: 126px; height: 52px;}
+	.s-prev:before, .s-next:before{ width: 80px;}
+	.news_list_item{padding-left: 95px;}
 }
 
 @media(max-width: 767px){
+	.wrapper{padding-top: 30px;}
+	.container{padding-left: 20px; padding-right: 20px;}
+	.header_col_contact{order:10;}
+	.header_col_burger{order:20;}
+	.header_col_logo{order:30}
+	.header_contact_phone_row{justify-content: flex-start;}
+	.header_logo{display: flex; justify-content: center; margin-top: 38px;}
+	.carousel_item_title {text-align: center;}
+	.main{padding-top: 46px;}
+	.main_carousel .carousel_item_content{padding-top: 0; max-width:100%}
+	.header_drop_col_lang{display: block;}
+	.header_drop_col_logo{order:10;}
+	.header_drop_col_lang{order:20;}
+	.header_drop_col_burger{order:30;}
+	.header_drop_col_search{order:40;}
+	.header_drop_lang{justify-content: center;}
+	.lang{padding: 0 14px;}
+	.header_drop_search{margin-top: 51px;}
+	.drop_menu_nav{flex-direction: column; text-align: center;}
+	.drop_menu_item_children{position: static; flex-direction: column; padding: 30px 0; }
+	.drop_menu_item_children .drop_menu_item_child .drop_menu_item_child_link{padding: 0;}
+	.drop_menu_item.parent.active .drop_menu_item_link:after, .drop_menu_item.parent:hover .drop_menu_item_link:after{display: none;}
+	.drop_menu_item_child_link{font-size: 18px; line-height: 35px;}
+	.drop_menu_item{padding-bottom: 0;}
+	.drop_menu_item.parent.active .drop_menu_item_link{position: relative; display: flex; align-items: center; justify-content: center;}
+	.drop_menu_item.parent.active .drop_menu_item_link:before{content: ''; background: #0D82CD; width: 80px; height: 1px; display: block; margin-right: 25px;}
+	.drop_menu_item.parent.active .drop_menu_item_link:after{content: ''; background: #0D82CD; width: 80px; height: 1px; display: block; margin-left: 25px;}
+	.drop_menu_item_child.active .drop_menu_item_child_link{position: relative; display: flex; align-items: center; justify-content: center; color: #0D82CD}
+	.drop_menu_item_child.active .drop_menu_item_child_link:before{content: ''; background: #0D82CD; width: 80px; height: 1px; display: block; margin-right: 25px;}
+	.drop_menu_item_child.active .drop_menu_item_child_link:after{content: ''; background: #0D82CD; width: 80px; height: 1px; display: block; margin-left: 25px; position: static; transform: none;}
+	.header_drop{max-height: 100vh; overflow: auto}
+	.navbar-toggler-close{margin: 0 0 0 auto;}
+	.main_carousel .carousel_item{max-width:100%}
+	.main_carousel .carousel_item_img_top, .main_carousel .carousel_item_img_base{max-width:70%; top: 50%;}
 
+	.main_carousel_nav{bottom:28%; right: 34%;}
+	.main_carousel{height: 590px;}
+	.bottom_scroll{display: none;}
+	.slick-dots{bottom: 0;}
+	.main_carousel .carousel_item_btn{ position: absolute; bottom: 40px; left: 0; right: 0;width: calc(100% - 40px);}
+	.carousel_item_btn .btn {width: 100%; margin-right: 20px;margin-left: 20px;}
+	.catalog_carousel .carousel_item_title {padding-left: 0; text-align: left;}
+	.catalog_carousel .carousel_item{width: auto;}
+	.catalog_carousel .carousel_item_img img{width: 100%;}
+	.catalog_carousel .carousel_item_content{display: block; height: auto;}
+	
 }
 
 @media(max-width: 575px){
-
+	
 }
