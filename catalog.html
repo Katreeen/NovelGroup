@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- style -->
-  <link rel="stylesheet" href="libs/bootstrap5/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/bootstrap5/bootstrap.min.css">
   <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
   <link rel="stylesheet" href="libs/slick/slick.css"/>
   <link rel="stylesheet" href="libs/slick/slick-theme.css"/>
@@ -22,12 +22,12 @@
 <body class="catalog" data-bs-spy="scroll" data-bs-target="#fix-menu">
   <div class="wrapper">
     <header class="header">
-      <div class="container">
+		<div class="container">
 			<div class="header_row row">
-				<div class="col-xl-2 header_col_logo">
+				<div class="col-md-4 col-lg-3 col-xl-2 header_col_logo">
 					<a	href="/" class="header_logo"><img src="i/logo.png" alt=""></a>
 				</div>
-				<div class="col-xl-4 header_col_search">
+				<div class="col-lg-3 header_col_search">
 					<div class="header_search">
 						<form class="form-inline form_search">
 							<input class="form-control -got-400" type="search" placeholder="Поиск по сайту" aria-label="Search">
@@ -35,8 +35,8 @@
 						</form>
 					</div>
 				</div>
-				<div class="col-xl-5 header_col_contact">
-					<div class="header_contact_phone_row row">
+				<div class="col-sm-10 col-md-7 col-lg-6 col-xl-5 col-xxl-6 header_col_contact">
+					<div class="header_contact_phone_row">
 						<div class="header_contact_phone">
 							<a href="tel:+7 (846) 979-88-84" class="h-phone -got-600 -fs-30">+7 (846) 979-88-84</a>
 							<span class="h-phone_text">Многоканальный телефон</span>
@@ -47,43 +47,114 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-1 header_col_lang">
+				<div class="col-md-2 col-lg-2 col-xl-1 header_col_lang">
 					<div class="header_lang -fs-20 ">
 						<a href="#ru" class="lang active">Ru</a>
 						<a href="#en" class="lang">En</a>
 					</div>
 				</div>
-			</div>
-	   </div>
-   </header>
-	<main class="main">
-		<div class="lines"></div>
-		<div class="main_nav">
-			<div class="container">
-				<div id="fix-menu" class="main_menu -got-700 -fs-20">
-					<a href="#" class="menu-item">Компания</a>
-					<a href="#" class="menu-item">Каталог</a>
-					<a href="#" class="menu-item">Услуги</a>
-					<a href="#" class="menu-item">Контакты</a>
-					<a href="#" class="menu-item">Информация</a>
+				<div class="col-sm-2 col-md-1 header_col_burger">
+					<button class="navbar-toggler"></button>
 				</div>
 			</div>
 		</div>
-		<nav aria-label="breadcrumb" class="breadcrumbs">
-			<div class="container">
-				<ol class="breadcrumb -got-400 -fs-14">
-					<li class="breadcrumb-item"><a href="#">Главная</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Каталог</li>
-				</ol>
+   </header>
+		<main class="main">
+			<div class="lines"></div>
+			<div class="main_nav">
+				<div class="container">
+					<div id="fix-menu" class="main_menu -got-700 -fs-20">
+						<a href="#" class="menu-item">Компания</a>
+						<a href="#" class="menu-item">Каталог</a>
+						<a href="#" class="menu-item">Услуги</a>
+						<a href="#" class="menu-item">Контакты</a>
+						<a href="#" class="menu-item">Информация</a>
+					</div>
+				</div>
 			</div>
-		 </nav>
-		<div class="main_content_wrap">
+			<div class="header_drop">
+				<div class="header_drop_top">
+					<div class="container">
+						<div class="header_drop_row row">
+							<div class="col-sm-4 col-md-3 col-lg-3 col-xl-2 header_drop_col_logo">
+								<a	href="/" class="header_drop_logo"><img src="i/logo.png" alt=""></a>
+							</div>
+							<div class="col-md-8 col-lg-6 col-xl-8 header_drop_col_search">
+								<div class="header_drop_search">
+									<form class="form-inline header_drop_form_search">
+										<input class="form-control -got-400" type="search" placeholder="Поиск по сайту" aria-label="Search">
+										<button class="btn search_btn" type="submit"></button>
+									</form>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-2 col-lg-2 col-xl-1 header_drop_col_lang">
+								<div class="header_drop_lang -fs-20 ">
+									<a href="#ru" class="lang active">Ru</a>
+									<a href="#en" class="lang">En</a>
+								</div>
+							</div>
+							<div class="col-sm-2 col-md-1 header_drop_col_burger">
+								<button class="navbar-toggler-close"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header_drop_menu">
+					<div class="container">
+						<ul class="drop_menu_nav -got-700 -fs-20">
+							<li class="drop_menu_item parent active">
+								<a href="#" class="drop_menu_item_link">Компания</a>
+								<ul class="drop_menu_item_children -ms-400 -fs-15">
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">Миссия</a>
+									</li>
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">История</a>
+									</li>
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">Сертификаты</a>
+									</li>
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">Партнеры</a>
+									</li>
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">Руководство</a>
+									</li>
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">Вакансии</a>
+									</li>
+									<li class="drop_menu_item_child">
+										<a href="#" class="drop_menu_item_child_link">Реквизиты</a>
+									</li>
+								</ul>
+							</li>
+							<li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Каталог</a></li>
+							<li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Услуги</a></li>
+							<li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Контакты</a></li>
+							<li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Информация</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<nav aria-label="breadcrumb" class="breadcrumbs">
+				<div class="container">
+					<ol class="breadcrumb -got-400 -fs-14">
+						<li class="breadcrumb-item"><a href="#">Главная</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Каталог</li>
+					</ol>
+				</div>
+			</nav>
+		<div class="main_content">
 			<div class="container">
-				<div class="main_content offset-2">
+				<div class="content offset-2">
 					<h1>Каталог</h1>
 					<div class="catalog_top">
 						<div class="catalog_top_title -ms-700 -fs-40">Компания обеспечивает индивидуальный подход к каждому клиенту.</div>
 						<div class="catalog_top_subtitle -ms-400 -fs-30">Производство с учетом всех<br> пожеланий заказчика.</div>
+					</div>
+					<div class="category_list_img">
+						<div class="category_item_img active" id="cat01"><img src="i/category01.png" alt=""></div>
+						<div class="category_item_img" id="cat02"><img src="i/category01.png" alt=""></div>
 					</div>
 				</div>
 			</div>
@@ -94,20 +165,18 @@
 					<a href="#cat01" class="category_item_name active">Бумага для ламинирования фанеры</a>
 					<a href="#cat02" class="category_item_name">Бумага для производства фанеры</a>
 				</div>
-				<div class="category_list_img">
-					<div class="category_item_img active" id="cat01"><img src="i/category01.png" alt=""></div>
-					<div class="category_item_img" id="cat02"><img src="i/category01.png" alt=""></div>
-				</div>
+				
 				
 			</div>
 		</div>
 		<div class="category_bottom ">
 			<div class="container">
 				<div class="category_bottom_wrap offset-2">
-					<div class="section_bottom_title -fs-40"><b>Новел Групп</b><br> качество, открытость, инновации</div>
+					<div class="section_bottom_title -fs-40"><b>Новел Групп</b></div>
+						<div class="section_bottom_subtitle -fs-40">Качество  |  Открытость  |  Инновации</div>
 					<div class="category_bottom_row">
 						<div class="section_bottom_desc -fs-20">
-							<p>СЕО текст</p>
+							
 
 							<p>Компания «Новел Групп» является первым российским производителем фенольной бумаги (бумаги, пропитанной фенольными смолами). Фенольная бумага используется для ламинирования фанеры с целью придания ей особых характеристик, необходимых для использования ее в качестве строительной опалубки. Специальные фенольные бумаги используются в производстве мебели, торгового и складского оборудования, в транспортном машиностроении.</p>
 
@@ -127,15 +196,15 @@
 		
 
 		
-	 </main>
+	</main>
 
   <footer class="footer">
 		<div class="container">
 			<div class="footer_row row">
-				<div class="col-lg-2">
+				<div class="col-md-3 col-lg-2">
 					<a href="#" class="footer_logo"><img src="i/logo-footer.png" alt=""> </a>
 				</div>
-				<div class="col-lg-5">
+				<div class="col-md-9 col-lg-10 col-xl-5">
 					<div class="footer_menu -got-400 -fs-20">
 						<a href="#" class="footer_menu-item">Компания</a>
 						<a href="#" class="footer_menu-item">Каталог</a>
@@ -144,7 +213,7 @@
 						<a href="#" class="footer_menu-item">Информация</a>
 					</div>
 				</div>
-				<div class="col-lg-5">
+				<div class="col-xl-5">
 					<div class="footer_contact_row">
 						<div class="footer_contact_phone">
 							<a href="tel:+7 (846) 979-88-84" class="f-phone -got-700 -fs-30">+7 (846) 979-88-84</a>
@@ -173,6 +242,3 @@
   <script src="js/common.js"></script>
 </body>
 </html>
-
-
-

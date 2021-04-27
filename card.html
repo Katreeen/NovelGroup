@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Карточка товара</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- style -->
+	<link rel="stylesheet" href="libs/bootstrap5/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="libs/slick/slick.css"/>
+  <link rel="stylesheet" href="libs/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="libs/jquery/jquery-ui/jquery-ui.min.css"/>
+  <link rel="stylesheet" href="libs/jquery/jquery-ui/jquery-ui.theme.min.css"/>
+  <link rel="stylesheet" href="libs/animate/splitting.css" />
+  <link rel="stylesheet" href="libs/animate/splitting-cells.css" />
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="catalog" data-bs-spy="scroll" data-bs-target="#fix-menu">
+  <div class="wrapper">
+    <header class="header">
+		<div class="container">
+			<div class="header_row row">
+				<div class="col-md-4 col-lg-3 col-xl-2 header_col_logo">
+					<a	href="/" class="header_logo"><img src="i/logo.png" alt=""></a>
+				</div>
+				<div class="col-lg-3 header_col_search">
+					<div class="header_search">
+						<form class="form-inline form_search">
+							<input class="form-control -got-400" type="search" placeholder="Поиск по сайту" aria-label="Search">
+							<button class="btn search_btn" type="submit"></button>
+						</form>
+					</div>
+				</div>
+				<div class="col-sm-10 col-md-7 col-lg-6 col-xl-5 col-xxl-6 header_col_contact">
+					<div class="header_contact_phone_row">
+						<div class="header_contact_phone">
+							<a href="tel:+7 (846) 979-88-84" class="h-phone -got-600 -fs-30">+7 (846) 979-88-84</a>
+							<span class="h-phone_text">Многоканальный телефон</span>
+						</div>
+						
+						<div class="header_callback_btn">
+							<a href="#" class="callback btn btn-primary"><span>обратный звонок</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-1 header_col_lang">
+					<div class="header_lang -fs-20 ">
+						<a href="#ru" class="lang active">Ru</a>
+						<a href="#en" class="lang">En</a>
+					</div>
+				</div>
+				<div class="col-sm-2 col-md-1 header_col_burger">
+					<button class="navbar-toggler"></button>
+				</div>
+			</div>
+		</div>
+  </header>
+  <main class="main">
+    <div class="lines"></div>
+    <div class="main_nav">
+      <div class="container">
+        <div id="fix-menu" class="main_menu -got-700 -fs-20">
+          <a href="#" class="menu-item">Компания</a>
+          <a href="#" class="menu-item">Каталог</a>
+          <a href="#" class="menu-item">Услуги</a>
+          <a href="#" class="menu-item">Контакты</a>
+          <a href="#" class="menu-item">Информация</a>
+        </div>
+      </div>
+    </div>
+    <div class="header_drop">
+      <div class="header_drop_top">
+        <div class="container">
+          <div class="header_drop_row row">
+            <div class="col-sm-4 col-md-3 col-lg-3 col-xl-2 header_drop_col_logo">
+              <a	href="/" class="header_drop_logo"><img src="i/logo.png" alt=""></a>
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-8 header_drop_col_search">
+              <div class="header_drop_search">
+                <form class="form-inline header_drop_form_search">
+                  <input class="form-control -got-400" type="search" placeholder="Поиск по сайту" aria-label="Search">
+                  <button class="btn search_btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2 col-lg-2 col-xl-1 header_drop_col_lang">
+              <div class="header_drop_lang -fs-20 ">
+                <a href="#ru" class="lang active">Ru</a>
+                <a href="#en" class="lang">En</a>
+              </div>
+            </div>
+            <div class="col-sm-2 col-md-1 header_drop_col_burger">
+              <button class="navbar-toggler-close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header_drop_menu">
+        <div class="container">
+          <ul class="drop_menu_nav -got-700 -fs-20">
+            <li class="drop_menu_item parent active">
+              <a href="#" class="drop_menu_item_link">Компания</a>
+              <ul class="drop_menu_item_children -ms-400 -fs-15">
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">Миссия</a>
+                </li>
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">История</a>
+                </li>
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">Сертификаты</a>
+                </li>
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">Партнеры</a>
+                </li>
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">Руководство</a>
+                </li>
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">Вакансии</a>
+                </li>
+                <li class="drop_menu_item_child">
+                  <a href="#" class="drop_menu_item_child_link">Реквизиты</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Каталог</a></li>
+            <li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Услуги</a></li>
+            <li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Контакты</a></li>
+            <li class="drop_menu_item"><a href="#" class="drop_menu_item_link">Информация</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumb -got-400 -fs-14">
+          <li class="breadcrumb-item"><a href="#">Главная</a></li>
+          <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+          <li class="breadcrumb-item"><a href="#">Бумага для производства ДБСП</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Бумага, пропитанная фенольной смолой для ДБСП HPL-LS -ПФ-155/230</li>
+        </ol>              
+      </div>
+    </nav>
+    <div class="main_content">
+      <div class="container">
+        <div class="content offset-2">
+          <h1>Бумага, пропитанная фенольной смолой для ДБСП HPL-LS -ПФ-155/230</h1>
+          <div class="card_row row">
+            <div class="col-lg-6">
+              <div class="card_image">
+                <img src="i/card_image.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card_info_wrap">
+                <div class="card_short_info -fs-14">
+                  <div class="short_info_row">
+                    <div class="short_info_col">Грамматура</div>
+                    <div class="short_info_col">120±5 г/м2</div>
+                  </div>
+                  <div class="short_info_row">
+                    <div class="short_info_col">Содержание смолы</div>
+                    <div class="short_info_col">27-35%</div>
+                  </div>
+                  <div class="short_info_row">
+                    <div class="short_info_col">Содержание летучих</div>
+                    <div class="short_info_col">6-8%</div>
+                  </div>
+                  <div class="short_info_row">
+                    <div class="short_info_col">Тип</div>
+                    <div class="short_info_col">листы</div>
+                  </div>
+                  <div class="short_info_row">
+                    <div class="short_info_col">Размер</div>
+                    <div class="short_info_col">по согласованию</div>
+                  </div>
+                  <div class="card_short_info_icon">
+                    <div class="short_info_icon_row row">
+                      <div class="col-md-4">
+                        <div class="short_info_icon_item">
+                          <div class="short_icon"><img src="i/card-icon1.png" alt=""></div>
+                          <p>Сертификат соответствия ГОСТ</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="short_info_icon_item">
+                          <div class="short_icon"><img src="i/card-icon2.svg" alt=""></div>
+                          <p>Трудногорючий</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="short_info_icon_item">
+                          <div class="short_icon"><img src="i/card-icon3.svg" alt=""></div>
+                          <p>Дополнительное свойство товара</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card_info_btn">
+                  <div class="card_info_btn_row">
+                    <a href="#" class="btn btn-secondary">задать вопрос</a>
+                    <a href="#" class="btn btn-secondary">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs card_info_tabs">
+              <div class="tabs__nav -got-500 -fs-20">
+                <a class="tabs__link tabs__link_active" href="#list-desc">Описание</a>
+                <a class="tabs__link" href="#list-total">Содержание упаковки</a>
+                <a class="tabs__link" href="#list-files">Файлы</a>
+              </div>
+              <div class="tabs__content card_info_tabs_content -fs-18">
+                <div class="tabs__pane tabs__pane_show" id="list-desc">
+                  <p>Фенольная бумага (бумага, импрегнированная фенолоформальдегидными смолами) с использованием рецептуры, обеспечивающей трудногорючие свойства продукта, является полупродуктом и используется в качестве внутренних слоев для производства компакт панелей методом HPL прессования с характеристиками Трудногорючий.</p>
+                  <p>HPL LS-ТГ 155/230  ТУ 17.12.7-003-69073969-2019 -  фенольная бумага на основе крафт-бумаги весом 155 г/м2 для внутренних слоев ДБСП- HPL (трудногорючий)</p>
+                </div>
+                <div class="tabs__pane" id="list-total">...</div>
+                <div class="tabs__pane" id="list-files">...</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card_recomended">
+      <div class="container">
+        <div class="recomended_carousel offset-2">
+          <div class="slide_item">
+            <div class="slide_item_img"><img src="i/recom01.png" alt=""></div>
+            <div class="slide_item_title">Бумага фенольная <b>для ламинирования фанеры PS 40/120</b></div>
+          </div>
+          <div class="slide_item">
+            <div class="slide_item_img"><img src="i/recom01.png" alt=""></div>
+            <div class="slide_item_title">Бумага фенольная <b>для ламинирования фанеры PS 40/120</b></div>
+          </div>
+          <div class="slide_item">
+            <div class="slide_item_img"><img src="i/recom01.png" alt=""></div>
+            <div class="slide_item_title">Бумага фенольная <b>для ламинирования фанеры PS 40/120</b></div>
+          </div>
+          <div class="slide_item">
+            <div class="slide_item_img"><img src="i/recom01.png" alt=""></div>
+            <div class="slide_item_title">Бумага фенольная <b>для ламинирования фанеры PS 40/120</b></div>
+          </div>
+          <div class="slide_item">
+            <div class="slide_item_img"><img src="i/recom01.png" alt=""></div>
+            <div class="slide_item_title">Бумага фенольная <b>для ламинирования фанеры PS 40/120</b></div>
+          </div>
+          <div class="slide_item">
+            <div class="slide_item_img"><img src="i/recom01.png" alt=""></div>
+            <div class="slide_item_title">Бумага фенольная <b>для ламинирования фанеры PS 40/120</b></div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+
+
+
+
+
+
+
+		<div class="card_bottom ">
+			<div class="container">
+				<div class="card_bottom_wrap offset-2">
+					<div class="card_bottom_title -fs-40"><b>Новел Групп</b> Качество  |  Открытость  |  Инновации</div>
+					<div class="card_bottom_row">
+						<div class="card_bottom_desc -fs-20">
+							
+
+							<p>Компания «Новел Групп» является первым российским производителем фенольной бумаги (бумаги, пропитанной фенольными смолами). Фенольная бумага используется для ламинирования фанеры с целью придания ей особых характеристик, необходимых для использования ее в качестве строительной опалубки. Специальные фенольные бумаги используются в производстве мебели, торгового и складского оборудования, в транспортном машиностроении.</p>
+
+							<p>Производство запущено в Самаре в 2012 году и рассчитано на выпуск 45 000 000 м² фенольной бумаги в год. Производство фенольных бумаг ведется на пропиточной линии производства фирмы «TOCCHIO» (Италия).</p>
+						</div>
+						<div class="section_bottom_img">
+							<img src="i/sectionbottom.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+
+		
+	</main>
+
+  <footer class="footer">
+		<div class="container">
+			<div class="footer_row row">
+				<div class="col-md-3 col-lg-2">
+					<a href="#" class="footer_logo"><img src="i/logo-footer.png" alt=""> </a>
+				</div>
+				<div class="col-md-9 col-lg-10 col-xl-5">
+					<div class="footer_menu -got-400 -fs-20">
+						<a href="#" class="footer_menu-item">Компания</a>
+						<a href="#" class="footer_menu-item">Каталог</a>
+						<a href="#" class="footer_menu-item">Услуги</a>
+						<a href="#" class="footer_menu-item">Контакты</a>
+						<a href="#" class="footer_menu-item">Информация</a>
+					</div>
+				</div>
+				<div class="col-xl-5">
+					<div class="footer_contact_row">
+						<div class="footer_contact_phone">
+							<a href="tel:+7 (846) 979-88-84" class="f-phone -got-700 -fs-30">+7 (846) 979-88-84</a>
+							<span class="f-phone_text -got-400 -fs-15">Многоканальный телефон</span>
+						</div>
+						<div class="footer_callback_btn">
+							<a href="#" class="callback btn btn-primary btn-white"><span>обратный звонок</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div>
+	</footer>
+</div>
+  <script src="libs/jquery/jquery-3.4.1.min.js"></script>
+  <script src="libs/bootstrap5/bootstrap.min.js"></script>
+  <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/jquery/jquery.maskedinput.min.js"></script>
+  <script src="libs/jquery/jquery-ui/jquery-ui.min.js"></script>
+  <!-- <script src="libs/animate/wow.min.js"></script> -->
+  <script src="libs/animate/SmoothScroll.min.js"></script>
+  <script src="libs/animate/gsap.min.js"></script>
+  <script src="libs/animate/ScrollTrigger.min.js"></script>
+  <script src="libs/animate/splitting.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
