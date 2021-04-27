@@ -10,14 +10,6 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		adaptiveHeight: true
 	});
-
-	// $('.main_carousel_nav .s-next').on('click', function() {
-	// 	$('.main_carousel').slick('slickPrev');
-	// });
-
-	// $('.main_carousel_nav .s-prev').on('click', function() {
-	// 	$('.main_carousel').slick('slickPrev');
-	// });
 	
 
 	$('.catalog_carousel').slick({
@@ -26,9 +18,22 @@ $(document).ready(function () {
 		infinite: true,
 		speed: 1000,
 		slidesToShow: 1,
-		variableWidth: true
-		//centerMode: true,
-		//adaptiveHeight: true
+		responsive: [
+			{
+			  breakpoint: 1920,
+			  settings: {
+					variableWidth: true,
+			  }
+			},
+		
+			{
+			  breakpoint: 767,
+			  settings: {
+					variableWidth: false,
+				 
+			  }
+			}
+		 ]
 	});
 
 	$('.partners_for').slick({
@@ -69,15 +74,14 @@ $(document).ready(function () {
 				 slidesToScroll: 1
 			  }
 			}
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
 		 ]
 		
 	 });
 	 $('.recomended_carousel').slick({
+		prevArrow: $('.card_recomended_nav .arrow-prev'),
+		nextArrow: $('.card_recomended_nav .arrow-next'),
 		dots: false,
-		arrows: false,
+	
 		infinite: true,
 		speed: 1000,
 		slidesToShow: 4,
