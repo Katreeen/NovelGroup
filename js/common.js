@@ -77,6 +77,9 @@ $(document).ready(function () {
 		 ]
 		
 	 });
+	 
+
+
 	 $('.recomended_carousel').slick({
 		prevArrow: $('.card_recomended_nav .arrow-prev'),
 		nextArrow: $('.card_recomended_nav .arrow-next'),

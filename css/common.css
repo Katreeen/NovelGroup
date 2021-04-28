@@ -377,6 +377,9 @@ button:focus, a:focus, img:focus {outline:none;}
 						.partners_nav_wrap{position: relative; height: 100%;}
 						.partners_nav{ margin-left: 100px; top:50%; transform:translateY(-50%)}
 							.partners_nav_item{margin: 0 33px;}
+							.partners_logo img{-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */ filter: grayscale(100%);}
+							.partners_nav .slick-active .partners_logo img{-webkit-filter: none; filter: none;}
+							.partners_nav .slick-active + .slick-active .partners_logo img{-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */ filter: grayscale(100%);}
 							.partners_nav .slick-track{display: flex !important; align-items: center; justify-content: flex-end;}
 							.partners_nav .slick-slide{height: inherit !important;}
 				.section_news{}
@@ -495,6 +498,9 @@ button:focus, a:focus, img:focus {outline:none;}
 			.short_info_icon_row{}
 				.short_info_icon_item{ }
 					.short_icon{display: flex; align-items: center; justify-content: center; height: 50px; margin-bottom: 5px;}
+					.short_icon_active{display: none; align-items: center; justify-content: center; height: 50px; margin-bottom: 5px;}
+					.short_info_icon_item:hover .short_icon{display: none;}
+					.short_info_icon_item:hover .short_icon_active{display: flex;}
 					.short_info_icon_item p{text-align: center;font-size: 12px; line-height: 1.2; margin-top: 0;}
 
 	.card_info_btn{}
