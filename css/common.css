@@ -372,11 +372,12 @@ button:focus, a:focus, img:focus {outline:none;}
 						.lang{text-decoration: none; color: #2E2E2E;}
 						.lang:first-child:after{content: "|"; color: #2E2E2E; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
 						.lang.active {font-family: 'GothamPro'; font-weight: 600;}
-.main{padding-top: 60px; padding-bottom: 103px;}
+.main{padding-top: 60px; padding-bottom: 103px; position: relative;}
 .lines {background: url(../i/second_bg.png)no-repeat; width: 100%; padding-top: 0; padding-bottom: 0; position: absolute; height: 790px;}
-.home .lines {background: url(../i/second_bg.png)no-repeat; width: 100%;  padding-top: 0; padding-bottom: 0; position: fixed; height: 790px;}
+.lines2{background: url(../i/lines2.png)no-repeat bottom right; width: 100%; padding-top: 0; padding-bottom: 0; position: absolute; height: 664px; bottom: -190px; right: 0;}
+/* .home .lines {background: url(../i/second_bg.png)no-repeat; width: 100%;  padding-top: 0; padding-bottom: 0; position: fixed; height: 790px;} */
+.grid{background: url(../i/first_bg.png)no-repeat; background-position: right; height: 780px; position: fixed; top:60px; right: 0; width: 100%;}
 
-.lines:before{content: ''; background: url(../i/first_bg.png)no-repeat; background-position: right; height: 780px; position: absolute; top:0; right: 0; width: 100%;}
 	.main_nav {}
 		.main_menu {width: 240px; position: fixed; top: 308px; z-index: 2; list-style-type: none; padding-left: 0;}
 		.catalog .main_menu{top: 367px}
