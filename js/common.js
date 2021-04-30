@@ -25,9 +25,8 @@ $(document).ready(function () {
 					variableWidth: true,
 			  }
 			},
-		
 			{
-			  breakpoint: 767,
+			  breakpoint: 575,
 			  settings: {
 					variableWidth: false,
 				 
@@ -44,8 +43,41 @@ $(document).ready(function () {
    	nextArrow: $('.partners_carousel_nav .s-next'),
 		infinite: true,
 		speed: 800,
-		slidesToShow: 4,
-		variableWidth: true,
+		
+		responsive: [
+			{
+			  breakpoint: 1920,
+			  settings: {
+					variableWidth: true,
+					slidesToShow: 4,
+			  }
+			},
+			{
+			  breakpoint: 1199,
+			  settings: {
+					variableWidth: false,
+					slidesToShow: 4,
+				 
+			  }
+			},
+			{
+			  breakpoint: 767,
+			  settings: {
+					variableWidth: false,
+					slidesToShow: 3,
+				 
+			  }
+			},
+			{
+			  breakpoint: 575,
+			  settings: {
+					variableWidth: false,
+					slidesToShow: 1,
+					centerMode: true,
+				 
+			  }
+			}
+		 ]
 
 		
 	});
