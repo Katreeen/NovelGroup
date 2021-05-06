@@ -11,7 +11,6 @@ $(document).ready(function () {
 		adaptiveHeight: true
 	});
 	
-
 	$('.catalog_carousel').slick({
 		dots: false,
 		arrows: false,
@@ -34,6 +33,19 @@ $(document).ready(function () {
 			}
 		 ]
 	});
+	$('.catalog_image_carousel').slick({
+		dots: false,
+		//arrows: false,
+		prevArrow: $('.catalog_image_carousel_nav .s-prev'),
+   	nextArrow: $('.catalog_image_carousel_nav .s-next'),
+		infinite: true,
+		speed: 1000,
+		fade: true,
+		slidesToShow: 1,
+		//adaptiveHeight: true
+	});
+	
+	
 
 
 
@@ -43,7 +55,7 @@ $(document).ready(function () {
    	nextArrow: $('.partners_carousel_nav .s-next'),
 		infinite: true,
 		speed: 800,
-		
+		variableWidth: true,
 		responsive: [
 			{
 			  breakpoint: 1920,
@@ -71,58 +83,54 @@ $(document).ready(function () {
 			{
 			  breakpoint: 575,
 			  settings: {
-					variableWidth: false,
+					variableWidth: true,
 					slidesToShow: 1,
-					centerMode: true,
+					//centerMode: true,
 				 
 			  }
 			}
 		 ]
-
-		
 	});
+
 	$('.partners_item.slick-active').first().find('.partners_item_info').css({"opacity" : "1"});
 	$('.partners_carousel').on('afterChange', function(){
 		$('.partners_item').find('.partners_item_info').css({"opacity" : "0"});
 		$('.partners_item.slick-active').first().find('.partners_item_info').css({"opacity" : "1"});
-		
 	});
 	$('.partners_carousel').on('beforeChange', function(){
 		$('.partners_item').find('.partners_item_info').css({"opacity" : "0"});
 		
 	});
 
-
-
-
-
 	 $('.recomended_carousel').slick({
 		prevArrow: $('.card_recomended_nav .arrow-prev'),
 		nextArrow: $('.card_recomended_nav .arrow-next'),
 		dots: false,
 	
+		infinite: false,
+		speed: 1000,
+		slidesToShow: 2,
+		// variableWidth: true
+		//centerMode: true,
+		//adaptiveHeight: true
+	 });
+	
+	 $('.news_carousel').slick({
+		prevArrow: $('.news_carousel_nav .arrow-prev'),
+		nextArrow: $('.news_carousel_nav .arrow-next'),
+		dots: false,
+	
 		infinite: true,
 		speed: 1000,
-		slidesToShow: 4,
-		variableWidth: true
-		//centerMode: true,
+		slidesToShow: 1,
+		variableWidth: true,
+		centerMode: true,
 		//adaptiveHeight: true
 	});
 	
 	
 	
-	$('.catalog_item_name').click(function () {
-		var href = $(this).attr('href');
-		if ($(this).hasClass('active')) {
-			
-		} else {
-			$('.catalog_item_name').removeClass('active');
-			$('.catalog_item_img').removeClass('active');
-			$(this).addClass('active');
-			$(href).addClass('active');
-		}
-		return false;
-	});
+
 	
 	// new WOW().init();
 
@@ -154,7 +162,13 @@ $(document).ready(function () {
 		// Поддержка тачпада
 		touchpadSupport   : true,
 	});
-	
+
+	if ($(window).width() < 576) {
+		$('.header_drop_col_search').prependTo($('.header_drop_bottom .container'));
+	}
+	else {
+		$(".header_drop_col_search").insertAfter($(".header_drop_col_logo"));
+	}
 
 	window.onresize = function (event) {
 		if ($(".pl-js").length){
@@ -163,6 +177,13 @@ $(document).ready(function () {
 			//console.log(left);
 			$('.pl-js').css( "padding-left", left);
 		}
+		if ($(window).width() < 575) {
+			$('.header_drop_col_search').prependTo($('.header_drop_bottom .container'));
+		}
+		else {
+			$(".header_drop_col_search").insertAfter($(".header_drop_col_logo"));
+		}
+	
 	};
 	if ($(".pl-js").length){
 		var viewportOffset = $('.offset-xxl-2')[0].getBoundingClientRect();
@@ -178,72 +199,11 @@ $(document).ready(function () {
 		$('.header_drop').slideUp();
 	})
 
-	if ($(".tabs").length){
-		var $tabs = function (target) {
-		var
-			_elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
-			_eventTabsShow,
-			_showTab = function (tabsLinkTarget) {
-				var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
-				tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
-				tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
-				tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
-				// если следующая вкладка равна активной, то завершаем работу
-				if (tabsLinkTarget === tabsLinkActive) {
-					return;
-				}
-				// удаляем классы у текущих активных элементов
-				if (tabsLinkActive !== null) {
-					tabsLinkActive.classList.remove('tabs__link_active');
-				}
-				if (tabsPaneShow !== null) {
-					tabsPaneShow.classList.remove('tabs__pane_show');
-				}
-				// добавляем классы к элементам (в завимости от выбранной вкладки)
-				tabsLinkTarget.classList.add('tabs__link_active');
-				tabsPaneTarget.classList.add('tabs__pane_show');
-				document.dispatchEvent(_eventTabsShow);
-			},
-			_switchTabTo = function (tabsLinkIndex) {
-				var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
-				if (tabsLinks.length > 0) {
-					if (tabsLinkIndex > tabsLinks.length) {
-						tabsLinkIndex = tabsLinks.length;
-					} else if (tabsLinkIndex < 1) {
-						tabsLinkIndex = 1;
-					}
-					_showTab(tabsLinks[tabsLinkIndex - 1]);
-				}
-			};
+
 		
-		_eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
-		
-		_elemTabs.addEventListener('click', function (e) {
-			var tabsLinkTarget = e.target;
-			// завершаем выполнение функции, если кликнули не по ссылке
-			if (!tabsLinkTarget.classList.contains('tabs__link')) {
-				return;
-			}
-			// отменяем стандартное действие
-			e.preventDefault();
-			_showTab(tabsLinkTarget);
-		});
-		
-		return {
-			showTab: function (target) {
-				_showTab(target);
-			},
-			switchTabTo: function (index) {
-				_switchTabTo(index);
-			}
-		}
-		
-		};
-		
-		$tabs('.tabs');
-	}
-		
-		$( "#product_sort" ).selectmenu();
+	$("#product_sort").selectmenu();
+	
+	
 
 
 
