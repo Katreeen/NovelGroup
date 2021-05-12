@@ -110,9 +110,25 @@ $(document).ready(function () {
 		infinite: false,
 		speed: 1000,
 		slidesToShow: 2,
-		// variableWidth: true
-		//centerMode: true,
-		//adaptiveHeight: true
+		responsive: [
+			{
+			  breakpoint: 1920,
+			  settings: {
+				
+					slidesToShow: 2,
+			  }
+			},
+			
+			{
+			  breakpoint: 767,
+			  settings: {
+				
+					slidesToShow: 1,
+				 
+			  }
+			},
+
+		 ]
 	 });
 	
 	 $('.news_carousel').slick({

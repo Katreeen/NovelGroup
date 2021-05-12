@@ -63,11 +63,17 @@
 			<div class="main_nav">
 				<div class="container">
 					<div id="fix-menu" class="main_menu -got-400 -fs-20">
-						<a href="#" class="menu-item">Компания</a>
-						<a href="#" class="menu-item">Каталог</a>
-						<a href="#" class="menu-item">Услуги</a>
-						<a href="#" class="menu-item">Контакты</a>
-						<a href="#" class="menu-item">Информация</a>
+						<li class="menu-item"><a href="#" class="menu-item-link">Компания</a></li>
+						<li class="menu-item"><a href="#" class="menu-item-link">Каталог</a></li>
+						<li class="menu-item"><a href="#" class="menu-item-link">Услуги</a></li>
+						<li class="menu-item"><a href="#" class="menu-item-link">Контакты</a></li>
+						<li class="menu-item"><a href="#" class="menu-item-link">Информация</a>
+                <ul class="sub-menu-item">
+                  <li class="menu-item"><a href="#" class="menu-item-link">Новости</a>
+                  <li class="menu-item"><a href="#" class="menu-item-link">Статьи</a>
+                  <li class="menu-item"><a href="#" class="menu-item-link">Производство</a>
+                </ul> 
+            </li>
 					</div>
 				</div>
 			</div>
@@ -171,317 +177,357 @@
 			</nav>
       <div class="main_content">
         <div class="container">
-          <div class="content offset-2">
+          <div class="content offset-xxl-2">
             <h1>Бумага для производства ДБСП</h1>
             <div class="category_wrap">
-              <div class="category_row row">
-                <div class="col-md-3">
-                  <ul class="category_nav -fs-25">
-                    <li class="category_nav_item active">
-                      <a href="#cat01" class="category_link">Бумага для ламинирования фанеры</a>
-                      <!-- <ul class="category_children -fs-15">
-                        <li class="category_child_item">
-                          <a href="#cat01" class="category_link">Бумага фенольная для ламинирования фанеры PS 75/220B</a>
-                        </li>
-                        <li class="category_child_item">
-                          <a href="#cat01" class="category_link">Бумага фенольная для ламинирования фанеры PS 40/120</a>
-                        </li>
-                        <li class="category_child_item">
-                          <a href="#cat01" class="category_link">Бумага фенольная для ламинирования фанеры PSR 40/120</a>
-                        </li>
-                        <li class="category_child_item">
-                          <a href="#cat01" class="category_link">Бумага фенольная для ламинирования фанеры PS 75/220</a>
-                        </li>
-                        <li class="category_child_item">
-                          <a href="#cat01" class="category_link">Бумага фенольная для ламинирования фанеры PSR 40/120B</a>
-                        </li>
-                        <li class="category_child_item">
-                          <a href="#cat01" class="category_link">Бумага фенольная клеящая для склеивания фанеры PGF 40/120</a>
-                        </li>
-                      </ul> -->
-                    </li>
-                    <li class="category_nav_item"><a href="#cat01" class="category_link active">Бумага для ламинирования фанеры</a></li>
-                    
-                  </ul>
+              <div class="category_top_panel">
+                <div class="product_filter_sort">
+                  <select name="product_sort" id="product_sort">
+                    <option value="name" selected="selected" data-sort="name">Сортировать по наименованию</option>
+                    <option value="instock" data-sort="instock">Сортировать по наличию</option>
+                    <option value="price" data-sort="price">Сортировать по цене</option>
+                  </select>
                 </div>
-                <div class="col-md-9">
-                  <div class="category_top_panel">
-                    <div class="category_top_panel_row row g-0">
-                      <div class="col-md-6">
-                        <div class="product_filter_sort">
-                          <select name="product_sort" id="product_sort">
-                            <option value="name" selected="selected" data-sort="name">Сортировать по наименованию</option>
-                            <option value="instock" data-sort="instock">Сортировать по наличию</option>
-                            <option value="price" data-sort="price">Сортировать по цене</option>
-                          </select>
-                        </div>
+                <div class="product_filter_view">
+                  <div class="product_filter_view_row">
+                    <a href="/?view=tile" class="filter_view tile-icon"></a>
+                    <a href="/?view=table" class="filter_view table-icon active"></a>
+                    <!-- <a href="/?view=list" class="filter_view list-icon"></a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="products_list products_list_table">
+                <div class="products_list_row row">
+                  <div class="col-md-6 product_item_col">
+                    <div class="product_item">
+                      <div class="product_item_img">
+                        <img src="i/recom01.png" alt="">
                       </div>
-                      <div class="col-md-6">
-                        <div class="product_filter_view">
-                          <div class="product_filter_view_row">
-                            <a href="/?view=tile" class="filter_view tile-icon active"></a>
-                            <a href="/?view=table" class="filter_view table-icon"></a>
-                            <a href="/?view=list" class="filter_view list-icon"></a>
+                      <div class="product_item_info">
+                        <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
                           </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
+                          </div>
+                        </div>
+                        <div class="product_item_btn">
+                          <a href="#" class="btn btn-link">Подробнее</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="products_list">
-                    <div class="products_list_row row">
-                      <div class="col-md-6 product_item_col">
-                        <div class="product_item">
-                          <div class="product_item_img">
-                            <img src="i/recom01.png" alt="">
+                  <div class="col-md-6 product_item_col">
+                    <div class="product_item">
+                      <div class="product_item_img">
+                        <img src="i/recom01.png" alt="">
+                      </div>
+                      <div class="product_item_info">
+                        <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
                           </div>
-                          <div class="product_item_compare">
-                            <a href="#" class="btn btn-compare"></a>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
                           </div>
-                          <div class="product_item_info">
-                            <div class="product_item_title -fs-25 -ms-700">Бумага фенольная для ламинирования фанеры PS 40/120</div>
-                            <div class="product_info -fs-14 -got-400">
-                              <div class="product_info_row">
-                                <div class="product_info_col">Грамматура</div>
-                                <div class="product_info_col">120±5 г/м2</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Время прессования</div>
-                                <div class="product_info_col">300-480 сек</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Температура прессования</div>
-                                <div class="product_info_col">130-138 °C</div>
-                              </div>
-                            </div>
-                            <div class="product_item_btn">
-                              <a href="#" class="btn btn-primary"><span>Подробнее</span></a>
-                            </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-6 product_item_col">
-                        <div class="product_item">
-                          <div class="product_item_img">
-                            <img src="i/recom01.png" alt="">
-                          </div>
-                          <div class="product_item_compare">
-                            <a href="#" class="btn btn-compare"></a>
-                          </div>
-                          <div class="product_item_info">
-                            <div class="product_item_title -fs-25 -ms-700">Бумага фенольная для ламинирования фанеры PS 40/120</div>
-                            <div class="product_info -fs-14 -got-400">
-                              <div class="product_info_row">
-                                <div class="product_info_col">Грамматура</div>
-                                <div class="product_info_col">120±5 г/м2</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Время прессования</div>
-                                <div class="product_info_col">300-480 сек</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Температура прессования</div>
-                                <div class="product_info_col">130-138 °C</div>
-                              </div>
-                            </div>
-                            <div class="product_item_btn">
-                              <a href="#" class="btn btn-primary"><span>Подробнее</span></a>
-                            </div>
-                          </div>
+                        <div class="product_item_btn">
+                          <a href="#" class="btn btn-link">Подробнее</a>
                         </div>
                       </div>
-                      <div class="col-md-6 product_item_col">
-                        <div class="product_item">
-                          <div class="product_item_img">
-                            <img src="i/recom01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-6 product_item_col">
+                    <div class="product_item">
+                      <div class="product_item_img">
+                        <img src="i/recom01.png" alt="">
+                      </div>
+                      <div class="product_item_info">
+                        <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
                           </div>
-                          <div class="product_item_compare">
-                            <a href="#" class="btn btn-compare"></a>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
                           </div>
-                          <div class="product_item_info">
-                            <div class="product_item_title -fs-25 -ms-700">Бумага фенольная для ламинирования фанеры PS 40/120</div>
-                            <div class="product_info -fs-14 -got-400">
-                              <div class="product_info_row">
-                                <div class="product_info_col">Грамматура</div>
-                                <div class="product_info_col">120±5 г/м2</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Время прессования</div>
-                                <div class="product_info_col">300-480 сек</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Температура прессования</div>
-                                <div class="product_info_col">130-138 °C</div>
-                              </div>
-                            </div>
-                            <div class="product_item_btn">
-                              <a href="#" class="btn btn-primary"><span>Подробнее</span></a>
-                            </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-6 product_item_col">
-                        <div class="product_item">
-                          <div class="product_item_img">
-                            <img src="i/recom01.png" alt="">
-                          </div>
-                          <div class="product_item_compare">
-                            <a href="#" class="btn btn-compare"></a>
-                          </div>
-                          <div class="product_item_info">
-                            <div class="product_item_title -fs-25 -ms-700">Бумага фенольная для ламинирования фанеры PS 40/120</div>
-                            <div class="product_info -fs-14 -got-400">
-                              <div class="product_info_row">
-                                <div class="product_info_col">Грамматура</div>
-                                <div class="product_info_col">120±5 г/м2</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Время прессования</div>
-                                <div class="product_info_col">300-480 сек</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Температура прессования</div>
-                                <div class="product_info_col">130-138 °C</div>
-                              </div>
-                            </div>
-                            <div class="product_item_btn">
-                              <a href="#" class="btn btn-primary"><span>Подробнее</span></a>
-                            </div>
-                          </div>
+                        <div class="product_item_btn">
+                          <a href="#" class="btn btn-link">Подробнее</a>
                         </div>
                       </div>
-                      <div class="col-md-6 product_item_col">
-                        <div class="product_item">
-                          <div class="product_item_img">
-                            <img src="i/recom01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-6 product_item_col">
+                    <div class="product_item">
+                      <div class="product_item_img">
+                        <img src="i/recom01.png" alt="">
+                      </div>
+                      <div class="product_item_info">
+                        <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
                           </div>
-                          <div class="product_item_compare">
-                            <a href="#" class="btn btn-compare"></a>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
                           </div>
-                          <div class="product_item_info">
-                            <div class="product_item_title -fs-25 -ms-700">Бумага фенольная для ламинирования фанеры PS 40/120</div>
-                            <div class="product_info -fs-14 -got-400">
-                              <div class="product_info_row">
-                                <div class="product_info_col">Грамматура</div>
-                                <div class="product_info_col">120±5 г/м2</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Время прессования</div>
-                                <div class="product_info_col">300-480 сек</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Температура прессования</div>
-                                <div class="product_info_col">130-138 °C</div>
-                              </div>
-                            </div>
-                            <div class="product_item_btn">
-                              <a href="#" class="btn btn-primary"><span>Подробнее</span></a>
-                            </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
                           </div>
                         </div>
+                        <div class="product_item_btn">
+                          <a href="#" class="btn btn-link">Подробнее</a>
+                        </div>
                       </div>
-                      <div class="col-md-6 product_item_col">
-                        <div class="product_item">
-                          <div class="product_item_img">
-                            <img src="i/recom01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-6 product_item_col">
+                    <div class="product_item">
+                      <div class="product_item_img">
+                        <img src="i/recom01.png" alt="">
+                      </div>
+                      <div class="product_item_info">
+                        <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
                           </div>
-                          <div class="product_item_compare">
-                            <a href="#" class="btn btn-compare"></a>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
                           </div>
-                          <div class="product_item_info">
-                            <div class="product_item_title -fs-25 -ms-700">Бумага фенольная для ламинирования фанеры PS 40/120</div>
-                            <div class="product_info -fs-14 -got-400">
-                              <div class="product_info_row">
-                                <div class="product_info_col">Грамматура</div>
-                                <div class="product_info_col">120±5 г/м2</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Время прессования</div>
-                                <div class="product_info_col">300-480 сек</div>
-                              </div>
-                              <div class="product_info_row">
-                                <div class="product_info_col">Температура прессования</div>
-                                <div class="product_info_col">130-138 °C</div>
-                              </div>
-                            </div>
-                            <div class="product_item_btn">
-                              <a href="#" class="btn btn-primary"><span>Подробнее</span></a>
-                            </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
                           </div>
+                        </div>
+                        <div class="product_item_btn">
+                          <a href="#" class="btn btn-link">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 product_item_col">
+                    <div class="product_item">
+                      <div class="product_item_img">
+                        <img src="i/recom01.png" alt="">
+                      </div>
+                      <div class="product_item_info">
+                        <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
+                          </div>
+                        </div>
+                        <div class="product_item_btn">
+                          <a href="#" class="btn btn-link">Подробнее</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="products_list products_list_tile">
+                <div class="product_item">
+                  <div class="product_item_img">
+                    <img src="i/recom01.png" alt="">
+                  </div>
+                  <div class="product_item_info">
+                    <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                    <div class="products_list_row">
+                      <div class="col-product_info">
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-product_text">
+                        <div class="product_info_text">
+                          <p>Фенольная бумага (бумага, импрегнированная фенолоформальдегидными смолами) является полупродуктом и используется в качестве внутренних слоев для производства постформируемых декоративных бумажно-слоистых пластиков (ДБСП) методом HPL прессования.
+                            ТУ 17.12.7-003-69073969-2019</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product_item_btn">
+                      <a href="#" class="btn btn-link">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_item_img">
+                    <img src="i/recom01.png" alt="">
+                  </div>
+                  <div class="product_item_info">
+                    <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                    <div class="products_list_row">
+                      <div class="col-product_info">
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-product_text">
+                        <div class="product_info_text">
+                          <p>Фенольная бумага (бумага, импрегнированная фенолоформальдегидными смолами) является полупродуктом и используется в качестве внутренних слоев для производства постформируемых декоративных бумажно-слоистых пластиков (ДБСП) методом HPL прессования.
+                            ТУ 17.12.7-003-69073969-2019</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product_item_btn">
+                      <a href="#" class="btn btn-link">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_item_img">
+                    <img src="i/recom01.png" alt="">
+                  </div>
+                  <div class="product_item_info">
+                    <div class="product_item_title -fs-25">Бумага, пропитанная фенольной смолой для <br><b>ДБСП HPL-LS -ПФ-155/230</b></div>
+                    <div class="products_list_row">
+                      <div class="col-product_info">
+                        <div class="product_info -fs-14 -got-400">
+                          <div class="product_info_row">
+                            <div class="product_info_col">Грамматура</div>
+                            <div class="product_info_col">120±5 г/м2</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Время прессования</div>
+                            <div class="product_info_col">300-480 сек</div>
+                          </div>
+                          <div class="product_info_row">
+                            <div class="product_info_col">Температура прессования</div>
+                            <div class="product_info_col">130-138 °C</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-product_text">
+                        <div class="product_info_text">
+                          <p>Фенольная бумага (бумага, импрегнированная фенолоформальдегидными смолами) является полупродуктом и используется в качестве внутренних слоев для производства постформируемых декоративных бумажно-слоистых пластиков (ДБСП) методом HPL прессования.
+                            ТУ 17.12.7-003-69073969-2019</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product_item_btn">
+                      <a href="#" class="btn btn-link">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="category_section_bottom">
+              <div class="section_bottom_wrap">
+                <div class="section_bottom_title -fs-60 -st-500">Новел Групп</div>
+                  <div class="section_bottom_subtitle -fs-25">Качество  |  Открытость  |  Инновации</div>
+                  <div class="section_bottom_text -ms-400 -fs-20">
+                    <p>Фенольная бумага (бумага, импрегнированная фенолоформальдегидными смолами, модифицированными меламином), является полупродуктом для производства декоративного бумажно-слоистого пластика (ДБСП), и используется в качестве внутренних слоев. Структура слоистого пластика многослойная. Продукт имеет 3 или 4 слоя, каждый из которых выполняет определенные функции. Основное назначение слоистого пластика – декор. </p>
+                    <p>Области, где его применяют, весьма разнообразны: это и облицовка мебели, дверей, оформление дизайна кухонь, кабинетов и других мест.</p>
+                    <p><img class="img-base" src="/i/cat.png" alt=""><img class="img-mobil" src="/i/catm.png" alt=""></p>
+                    <div class="section_bottom_row row">
+                      <div class="col-md-6 pb-60">
+                          <h2>CPL</h2>
+                          <p>Фенольная бумага для внутренних слоев ДБСП (CPL) применяется в прессах непрерывного прессования, стандартные режимы прессования в прессе CPL – скорость 7-30 м/мин, температура 160-180 oС, давление до 30 кг/см2. Количество слоев фенольной бумаги зависит от требуемой толщины ДБСП.</p>
+                      </div>
+                      <div class="col-md-6 pb-60">
+                        <h2>HPL</h2>
+                        <p>Фенольная бумага для внутренних слоев ДБСП (HPL) используется в многопролетных и малопролетных прессах по аналогии с ламинированием фанеры, в качестве подложки для декоративной меламиновой пленки служит большое количество слоев фенольной бумаги, которое зависит от толщины пластика.</p>
+                        <p>Режимы прессования ДБСП методом HPL зависят от толщины пластика. Стандартные режимы прессования - время прессования 40-120 минут, температуры прессования 120-180 oС, давление 110 кг/см2.</p>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-		
-      <div class="category_section_bottom">
-        <div class="container">
-          <div class="section_bottom_wrap offset-2">
-            <div class="section_bottom_title -fs-40"><b>Новел Групп</b></div>
-              <div class="section_bottom_subtitle -fs-40">качество, открытость, инновации</div>
-              <div class="section_bottom_row row -fs-20">
-                <div class="col-md-6 pb-60">
-                    <p>Фенольная бумага (бумага, импрегнированная фенолоформальдегидными смолами, модифицированными меламином), является полупродуктом для производства декоративного бумажно-слоистого пластика (ДБСП), и используется в качестве внутренних слоев. Структура слоистого пластика многослойная. Продукт имеет 3 или 4 слоя, каждый из которых выполняет определенные функции. Основное назначение слоистого пластика – декор. 
-                    <p>Области, где его применяют, весьма разнообразны: это и облицовка мебели, дверей, оформление дизайна кухонь, кабинетов и других мест.</p>
-                </div>
-                <div class="col-md-6 pb-60">
-                  <img src="/i/cat.png" alt="">
-                </div>
-                <div class="col-md-6 pb-60">
-                    <h2>CPL</h2>
-                    <p>Фенольная бумага для внутренних слоев ДБСП (CPL) применяется в прессах непрерывного прессования, стандартные режимы прессования в прессе CPL – скорость 7-30 м/мин, температура 160-180 oС, давление до 30 кг/см2. Количество слоев фенольной бумаги зависит от требуемой толщины ДБСП.</p>
-                </div>
-                <div class="col-md-6 pb-60">
-                  <h2>HPL</h2>
-                  <p>Фенольная бумага для внутренних слоев ДБСП (HPL) используется в многопролетных и малопролетных прессах по аналогии с ламинированием фанеры, в качестве подложки для декоративной меламиновой пленки служит большое количество слоев фенольной бумаги, которое зависит от толщины пластика.</p>
-                  <p>Режимы прессования ДБСП методом HPL зависят от толщины пластика. Стандартные режимы прессования - время прессования 40-120 минут, температуры прессования 120-180 oС, давление 110 кг/см2.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-		
-		
-		
-		
-		
 
-		
-	</main>
-
-  <footer class="footer">
-		<div class="container">
-			<div class="footer_row row">
-				<div class="col-md-3 col-lg-2">
-					<a href="#" class="footer_logo"><img src="i/logo-footer.png" alt=""> </a>
-				</div>
-				<div class="col-md-9 col-lg-10 col-xl-5">
-					<div class="footer_menu -got-400 -fs-20">
-						<a href="#" class="footer_menu-item">Компания</a>
-						<a href="#" class="footer_menu-item">Каталог</a>
-						<a href="#" class="footer_menu-item">Услуги</a>
-						<a href="#" class="footer_menu-item">Контакты</a>
-						<a href="#" class="footer_menu-item">Информация</a>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer_row row">
+					<div class="col-md-5 col-lg-5 col-xl-3 footer_col_copy">
+					
+						<div class="footer_copy -got-300 -fs-20">© 2021 ООО «Новел Групп»<br>
+							Политика конфиденциальности</div>
 					</div>
-				</div>
-				<div class="col-xl-5">
-					<div class="footer_contact_row">
-						<div class="footer_contact_phone">
-							<a href="tel:+7 (846) 979-88-84" class="f-phone -got-700 -fs-30">+7 (846) 979-88-84</a>
-							<span class="f-phone_text -got-400 -fs-15">Многоканальный телефон</span>
+					<div class="col-md-7 col-lg-7 col-xl-5 footer_col_menu">
+						<div class="footer_menu -got-300 -fs-20">
+							<a href="#" class="footer_menu-item">Компания</a>
+							<a href="#" class="footer_menu-item">Каталог</a>
+							<a href="#" class="footer_menu-item">Услуги</a>
+							<a href="#" class="footer_menu-item">Контакты</a>
+							<a href="#" class="footer_menu-item">Информация</a>
 						</div>
-						<div class="footer_callback_btn">
-							<a href="#" class="callback btn btn-primary btn-white"><span>обратный звонок</span></a>
+					</div>
+					<div class="col-xl-4 d-xl-block d-none">
+						<div class="footer_contact_row">
+							<div class="footer_contact_phone">
+								<a href="tel:88469798884" class="f-phone -got-600 -fs-22">8 (846) 979-88-84</a>
+								<span class="f-phone_text -got-400 -fs-15">многоканальный</span>
+							</div>
+							<div class="footer_callback_btn">
+								<a href="#" class="callback btn btn-primary">обратный звонок</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-    	</div>
-	</footer>
+				</div>
+		</footer>
 </div>
   <script src="libs/jquery/jquery-3.4.1.min.js"></script>
   <script src="libs/bootstrap5/bootstrap.min.js"></script>
@@ -497,3 +543,6 @@
   <script src="js/common.js"></script>
 </body>
 </html>
+
+
+
