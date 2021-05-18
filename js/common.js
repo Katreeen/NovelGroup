@@ -143,7 +143,19 @@ $(document).ready(function () {
 		centerMode: true,
 		//adaptiveHeight: true
 	});
-	
+	$('#vacancies_list_name').selectmenu({
+		change: function (event, ui) {
+			let filter = ui.item.value;
+			//console.log(filter);
+			if (filter == 'all') {
+				$('.vacancies_item').removeClass('hide');	
+			} else {
+				$('.vacancies_item').addClass('hide');
+				$('.vacancies_item[data-name="' + filter + '"]').removeClass('hide');
+			}
+			
+		}
+	 });
 	
 	
 
