@@ -538,7 +538,7 @@ button:focus, a:focus, img:focus {outline:none;}
 
 
 .main_content{position: relative;}
-	.content{padding-top: 100px;}
+	/* .content{padding-top: 100px;} */
 	.catalog .content h1{max-width: 816px;}
 	.card .content h1{max-width: 100%;}
 		/* .catalog_top{margin-top: 140px; max-width: 50%}
