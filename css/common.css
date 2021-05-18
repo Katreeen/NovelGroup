@@ -374,7 +374,7 @@ button:focus, a:focus, img:focus {outline:none;}
 .grid{background: url(../i/first_bg.png)no-repeat; background-position: right; height: 780px; position: fixed; top:60px; right: 0; width: 100%; pointer-events: none;}
 
 	.main_nav {}
-		.main_menu {width: 240px; position: fixed; top: 367px; z-index: 2; list-style-type: none; padding-left: 0;}
+		.main_menu {width: 240px; position: fixed; top: 309px; z-index: 2; list-style-type: none; padding-left: 0;}
 		.catalog .main_menu{top: 367px}
 		.main_menu .list-group-item{background-color:transparent; padding: 0;border:none;	}
 		.list-group-item+.list-group-item.active{margin-top: 0; border-top-width:0;}
