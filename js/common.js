@@ -8,9 +8,13 @@ $(document).ready(function () {
 		speed: 1000,
 		fade: true,
 		slidesToShow: 1,
-		adaptiveHeight: true
+		//adaptiveHeight: true
 	});
 	
+
+	
+
+
 	$('.catalog_carousel').slick({
 		dots: false,
 		arrows: false,
@@ -44,7 +48,16 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		//adaptiveHeight: true
 	});
-	
+	$('.catalog_image_carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+		$('.catalog_info .catalog_items .catalog_item_title').removeClass('active');
+		console.log(currentSlide);
+		if (currentSlide == '0') {
+			$('.catalog_info .catalog_items .catalog_item_title').first().addClass('active');
+		} else {
+			$('.catalog_info .catalog_items .catalog_item_title').last().addClass('active');
+		}
+		
+	});
 	
 
 
@@ -156,8 +169,25 @@ $(document).ready(function () {
 			
 		}
 	 });
+
+	if ($('#map').length) {
+		mapboxgl.accessToken = 'pk.eyJ1IjoiZWthdGVyZWVlbmEiLCJhIjoiY2tvdTFheDQ1MDJmYjJ2cGYyaXBqdHBieSJ9.XDRLOqrNfGxYgqByJ5zQCg';
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [50.12975967591858, 53.09823883237333],
+			zoom: 9
+		});
+
+		// Create a default Marker and add it to the map.
+		var marker1 = new mapboxgl.Marker()
+			.setLngLat([50.12975967591858, 53.09823883237333])
+			.addTo(map);
 	
+	}
+
 	
+ 
 
 	
 	// new WOW().init();
