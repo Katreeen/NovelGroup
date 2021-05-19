@@ -5,9 +5,10 @@ $(document).ready(function () {
 		prevArrow: $('.main_carousel_wrap .s-prev'),
    	nextArrow: $('.main_carousel_wrap .s-next'),
 		infinite: true,
-		speed: 1000,
+		speed: 500,
 		fade: true,
-		slidesToShow: 1,
+		cssEase: 'linear',
+		slidesToShow: 1
 		//adaptiveHeight: true
 	});
 	
