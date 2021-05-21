@@ -326,7 +326,7 @@ button:focus, a:focus, img:focus {outline:none;}
 	
 
 .slick-dots{bottom: 178px;}
-.slick-dots li{margin: 0 20px; width: auto;}
+.slick-dots li{margin: 0 20px; width: auto;     transition: all 0.5s;}
 .slick-dots li:first-child{margin-left: 0;}
 .slick-dots li:last-child{margin-right: 0;}
 .slick-dots li button{padding: 0; width: auto; transition: all 0.3s;}
@@ -402,24 +402,26 @@ button:focus, a:focus, img:focus {outline:none;}
 						.main_carousel .carousel_item_img_top{position: absolute; top: 0; right: 0;  max-width:50%; z-index: 2;}
 						.main_carousel .carousel_item_img_base{position: absolute; top: 55px; right: 0; max-width:50%;}
 
-							.main_carousel .carousel_item_content {display: flex; flex-direction: column; max-width: 530px; padding-top: 140px;}
+							.main_carousel .carousel_item_content {display: flex; flex-direction: column; max-width: 560px; padding-top: 140px;}
 								.carousel_item_title {line-height: 1.1; color: #2E2E2E;}
-								.char {animation: slide-in 0.5s cubic-bezier(.3, 0, .3, 1) both; animation-delay: calc(80ms * var(--char-index));}
+								.carousel_item_title .char {animation: slide-in 0.5s cubic-bezier(.3, 0, .3, 1) both; animation-delay: calc(80ms * var(--char-index));}
 								 @keyframes slide-in {
 									from {
 									  transform: translateY(1em);
 									  opacity: 0;
 									}
 								 }
+
 								.main_carousel .carousel_item_btn {margin-top: 40px;}
-					.bottom_scroll{background: url(../i/bscroll.svg)no-repeat center; height: 63px; text-align: center; margin-top: -120px;}
+					.bottom_scroll{background: url(../i/bscroll.svg)no-repeat center; height: 63px; text-align: center; margin-top: -120px; transition: all 0.3s;}
+					
 				.section_catalog{}
 				.section_catalog_wrap{padding-left: 22%; position: relative;}
 					.catalog_btn{position: absolute; bottom: 0; left: 0; z-index: 2;}
 					.carousel_item_top{max-width: 516px; position: absolute; top:0; right: 10%; z-index: 2;}
 				.catalog_carousel_wrap{position: relative;}
 					.catalog_carousel{height: 780px; margin-left: 50px;}
-						.catalog_carousel .carousel_item{padding: 0 15px; position: relative;}
+						.catalog_carousel .carousel_item{padding: 0 15px; position: relative; cursor: none;}
 							.catalog_carousel .carousel_item_content{position: relative;display: flex; flex-direction: column; max-width: 100%; padding-top: 0;	 height: 100%; }
 							.catalog_carousel .slick-list.draggable {padding-right: 386px;}
 								.catalog_carousel .carousel_item_title{position: relative; z-index: 2; margin-bottom: 30px; max-width: 80%;}
@@ -491,7 +493,7 @@ button:focus, a:focus, img:focus {outline:none;}
 						.news_list_item{ position: relative; display: block; text-decoration: none; max-width: 376px; color: #2E2E2E;}
 							.news_list_item_data{color: #000; line-height: 1.5; display: block; margin-top: 20px; position: relative;}
 							.news_list_item_data:after{content: ""; position: absolute; top: 50%; right: 0; transform:translateY(-50%); background: url(../i/partners_item_btn.svg)no-repeat right; width: 84px;height: 7px;}
-							.news_list_item_img{-webkit-filter: grayscale(100%); filter: grayscale(100%); display: block;}
+							.news_list_item_img{-webkit-filter: grayscale(100%); filter: grayscale(100%); display: block;position: relative;}
 							.news_list_item_title{text-decoration: none; margin-top: 21px; display: block; line-height: 1.2; display: block;}
 							.news_list_item:hover .news_list_item_img{-webkit-filter:none; filter:none; display: block;}
 
@@ -808,7 +810,7 @@ button:focus, a:focus, img:focus {outline:none;}
 	.vacancies_list{}
 		.vacancies_list_title{color: #2E2E2E; line-height: 35px; margin-bottom: 23px;}
 		.vacancies_list_value{margin-top: 80px;}
-			.vacancies_item{margin-bottom: 54px; }
+			.vacancies_item{margin-bottom: 54px; transition: all 0.3s;}
 			.vacancies_item.hide{display: none;}
 			.vacancies_item.active{display: block;}
 				.vacancies_item_title{margin-bottom: 15px;}

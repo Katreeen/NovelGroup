@@ -67,7 +67,7 @@ $(document).ready(function () {
 		dots: false,
 		prevArrow: $('.partners_carousel_nav .s-prev'),
    	nextArrow: $('.partners_carousel_nav .s-next'),
-		infinite: true,
+		infinite: false,
 		speed: 800,
 		variableWidth: true,
 		responsive: [
@@ -187,41 +187,45 @@ $(document).ready(function () {
 	
 	}
 
+	// CURSOR
+var cursor = $(".cursor");
+
+function moveCircle(e) {
+	TweenLite.to(cursor, 0.3, {
+	  css: {
+		left: e.clientX,
+		top: e.clientY,
+		opacity: 1,
+			
+	  }
+	});
+ }
+
+$(".catalog_carousel .slick-list").on("mouseover", function() {
+gsap.to(cursor, 0.4, { scale: 1, autoAlpha: 1 });
+
+$(".section_catalog .slick-list").on("mousemove", moveCircle);
+});
+
+$(".section_catalog .slick-list").on("mouseout", function() {
+gsap.to(cursor, 0.4, { scale: 0.4, autoAlpha: 0 });
+});
+
+
+$(".news_list_item_img").on("mouseover", function () {
+	cursor.text('Подробнее');
+	gsap.to(cursor, 0.4, { scale: 1, autoAlpha: 1 });
+	$(".news_list_item_img").on("mousemove", moveCircle);
+	console.log('mouseover');
+});
+$(".news_list_item_img").on("mouseout", function() {
+	gsap.to(cursor, 0.4, { scale: 0.4, autoAlpha: 0 });
+});
 	
  
 
 	
-	// new WOW().init();
-
-
-	SmoothScroll({
-		// Время скролла 400 = 0.4 секунды
-		animationTime    : 1000,
-		// Размер шага в пикселях 
-		stepSize         : 75,
-  
-		// Дополнительные настройки:
-		
-		// Ускорение 
-		accelerationDelta : 30,  
-		// Максимальное ускорение
-		accelerationMax   : 2,   
-  
-		// Поддержка клавиатуры
-		keyboardSupport   : true,  
-		// Шаг скролла стрелками на клавиатуре в пикселях
-		arrowScroll       : 50,
-  
-		// Pulse (less tweakable)
-		// ratio of "tail" to "acceleration"
-		pulseAlgorithm   : true,
-		pulseScale       : 4,
-		pulseNormalize   : 1,
-  
-		// Поддержка тачпада
-		touchpadSupport   : true,
-	});
-
+	
 	if ($(window).width() < 576) {
 		$('.header_drop_col_search').prependTo($('.header_drop_bottom .container'));
 	}
@@ -266,117 +270,7 @@ $(document).ready(function () {
 
 
 
-// Animation
 
-// 	const mainTl = gsap.timeline();
-
-// 	ScrollTrigger.create({
-// 		animation: mainTl,
-// 		start: "top top", 
-//     	end: "bottom top",
-// 		trigger: '.main_carousel',
-// 		scrub: true,
-// 	});
-
-// 	mainTl.fromTo(".main_carousel .slick-arrow", { opacity: 1 }, { opacity: 0 }, 0.1)
-// 			.fromTo(".main_carousel .slick-dots", { opacity: 1 }, { opacity: 0 }, 0.1);
-
-// 	gsap.to(".main_carousel .carousel_item_title", {
-// 		yPercent: -100,
-// 		ease: "none",
-// 		scrollTrigger: {
-// 			trigger: ".main_carousel",
-// 			start: "top top", 
-//     		end: "bottom top",
-// 		  	scrub: true
-// 		}, 
-// 	});
-
-// 	gsap.to(".bottom_scroll", {
-// 		yPercent: 50,
-// 		ease: "none",
-// 		scrollTrigger: {
-// 		  trigger: ".main_carousel",
-// 		  scrub: true
-// 		}, 
-// 	});
-
-// 	gsap.to(".section_catalog .carousel_item_title", {
-// 		yPercent: -100,
-// 		ease: "none",
-// 		scrollTrigger: {
-// 			trigger: ".section_catalog",
-// 			start: "top top", 
-//     		end: "bottom top",
-// 		  scrub: true
-// 		}, 
-// 	});
-
-
-// 	gsap.to(".section_catalog .carousel_item_img", {
-// 		yPercent: 20,
-// 		ease: "none",
-// 		scrollTrigger: {
-// 			trigger: ".section_catalog",
-// 			start: "top top",
-// 			end: "bottom top",
-// 			scrub: true
-// 		}, 
-// 	});
-
-	
-// // CURSOR
-// var cursor = $(".cursor");
-
-// 	function moveCircle(e) {
-// 		TweenLite.to(cursor, 0.3, {
-// 		  css: {
-// 			left: e.clientX,
-// 			top: e.clientY,
-// 			opacity: 1,
-				
-// 		  }
-// 		});
-// 	 }
-
-// $(".catalog_carousel .slick-list").on("mouseover", function() {
-// 	gsap.to(cursor, 0.4, { scale: 1, autoAlpha: 1 });
-
-// 	$(".section_catalog .slick-list").on("mousemove", moveCircle);
-//  });
-
-//  $(".section_catalog .slick-list").on("mouseout", function() {
-// 	gsap.to(cursor, 0.4, { scale: 0.4, autoAlpha: 0 });
-//  });
-
-	
-//  gsap.fromTo($('.carousel_item_img'), {duration: 3, y: 0, x: "100%", opacity: 0}, {duration: 3, ease: "expo.out", x: 0, opacity: 1});
-//  $('.main_carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-// 	 gsap.fromTo($('.carousel_item_img'), { duration: 3, x: "100%", opacity: 0 }, { duration: 3, ease: "expo.out", x: 0, opacity: 1 });
-// 	 Splitting();
-//  });
-
-
-// const aboutTl = gsap.timeline();
-// 	ScrollTrigger.create({
-// 		animation: aboutTl,
-// 		trigger: '.section_about',
-// 		start: 'top top',
-// 		//end: 'bottom',
-// 		ease: "none",
-// 		scrub: true,
-// 		//pin: true
-// 	});
-
-// 	aboutTl.to(".about_img", { y: '-50%', duration: 3})
-// 			 .to(".about_text",  { y: '-50%', duration: 3})
-// 			 .to(".about_bottom",  { y: '-50%', duration: 3 });
-
-
-
-
-	
-// Splitting()
 	
 	
 	
