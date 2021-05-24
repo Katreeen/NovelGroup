@@ -169,7 +169,9 @@
 
 html, body {
 	font-family: 'GothamPro', sans-serif; font-weight: 400; font-size: 16px; line-height: 25px; color: #2E2E2E; max-width: 1920px; min-width: 320px; margin: 0 auto; position: relative; background: #E1E1E1;
+	scroll-behavior: smooth;   
 }
+
 
 
 img {max-width:100%;}
@@ -339,7 +341,7 @@ button:focus, a:focus, img:focus {outline:none;}
 
 
 .home {}
-	.wrapper {padding-top: 16px;    }
+	.wrapper {padding-top: 16px; overflow-x: hidden; }
 		.header {}
 			.header_row {align-items: center;}
 				.header_col_logo {}
@@ -422,7 +424,7 @@ button:focus, a:focus, img:focus {outline:none;}
 				.catalog_carousel_wrap{position: relative;}
 					.catalog_carousel{height: 780px; margin-left: 50px;}
 						.catalog_carousel .carousel_item{padding: 0 15px; position: relative; cursor: none;}
-							.catalog_carousel .carousel_item_content{position: relative;display: flex; flex-direction: column; max-width: 100%; padding-top: 0;	 height: 100%; }
+							.catalog_carousel .carousel_item_content{position: relative;display: flex; flex-direction: column; max-width: 100%; padding-top: 50px;	 height: 100%; }
 							.catalog_carousel .slick-list.draggable {padding-right: 386px;}
 								.catalog_carousel .carousel_item_title{position: relative; z-index: 2; margin-bottom: 30px; max-width: 80%;}
 								.catalog_carousel .carousel_item_img{background: #fff;}
@@ -435,7 +437,7 @@ button:focus, a:focus, img:focus {outline:none;}
 							.catalog_list_item_img{background: #fff;}
 
 
-
+.animation-window{overflow: hidden;}
 				.section_about{}
 				.section_about:before{}
 					.section_content{position: relative;}
@@ -445,6 +447,7 @@ button:focus, a:focus, img:focus {outline:none;}
 								.about_desc{line-height: 1.6;}
 						.about_bottom{margin-top: 74px; position: relative; display: flex; justify-content: flex-end; align-items: flex-end}
 								.about_bottom_img{}
+								.about_img{overflow: hidden;}
 				.section_service{overflow: hidden;}
 					.service_wrap_row{position: relative; display: flex; justify-content: flex-end; align-items: flex-end;}
 						.service_btn .btn-link{width: 350px; }

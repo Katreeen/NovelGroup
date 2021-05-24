@@ -175,7 +175,7 @@ $(document).ready(function () {
 		mapboxgl.accessToken = 'pk.eyJ1IjoiZWthdGVyZWVlbmEiLCJhIjoiY2tvdTFheDQ1MDJmYjJ2cGYyaXBqdHBieSJ9.XDRLOqrNfGxYgqByJ5zQCg';
 		var map = new mapboxgl.Map({
 			container: 'map',
-			style: 'mapbox://styles/mapbox/streets-v11',
+			style: 'mapbox://styles/ekatereeena/ckp2gw6ko6e0517mhs7hqu99u',
 			center: [50.12975967591858, 53.09823883237333],
 			zoom: 9
 		});
