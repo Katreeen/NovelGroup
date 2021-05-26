@@ -1,3 +1,19 @@
+function startAnimate() {
+	const wow = new WOW(
+		{
+		  boxClass:     'wow',
+		  animateClass: 'animated',
+		  offset:       0, 
+		  mobile:       true,
+		  live:         true,
+		  callback:     function(box) {},
+		  scrollContainer: null, 
+		  resetAnimation: true,
+		}
+	 );
+	wow.init();
+}
+
 $(document).ready(function () {
 	$(this).scrollTop(0);
 
@@ -10,22 +26,8 @@ $(document).ready(function () {
 		key: null
 	});
 	
-	if ($('body').hasClass('ready')) {
-		var wow = new WOW(
-			{
-			  boxClass:     'wow',
-			  animateClass: 'animated',
-			  offset:       0, 
-			  mobile:       true,
-			  live:         true,
-			  callback:     function(box) {},
-			  scrollContainer: null, 
-			  resetAnimation: true,
-			}
-		 );
-		wow.init();
-	}
-	
+
+
 	
 
 	//$(window).on("mousewheel DOMMouseScroll", SmoothScroll());
