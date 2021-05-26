@@ -338,7 +338,7 @@ button:focus, a:focus, img:focus {outline:none;}
 .slick-dots li.slick-active button, .slick-dots li.slick-active{width: 85px;}
 
 
-.wow{animation-delay: 0.3s;}
+/* .wow{animation-delay: 0.3s;} */
 
 .home {}
 	.wrapper {padding-top: 16px; overflow-x: hidden; }
