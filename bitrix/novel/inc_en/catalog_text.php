@@ -1,0 +1,1 @@
+The Novel Group company provides an individual approach to each client. Production taking into account all the wishes of the customer.
